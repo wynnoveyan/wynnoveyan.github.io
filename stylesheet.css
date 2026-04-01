@@ -1,131 +1,326 @@
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:    #1a6fc4;
+  --blue-lt: #eaf2fb;
+  --orange:  #e07b28;
+  --text:    #1a1a2e;
+  --muted:   #666;
+  --border:  #e4e8ed;
+  --bg:      #f8f9fb;
+  --white:   #ffffff;
+  --radius:  10px;
+  --shadow:  0 2px 12px rgba(0,0,0,0.07);
 }
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
 }
 
 a {
-  color: #1772d0;
+  color: var(--blue);
   text-decoration: none;
+  transition: color .2s;
+}
+a:hover { color: var(--orange); }
+
+/* ── Layout wrapper ───────────────────────────────────────── */
+.page-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
 }
 
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
+/* ── Hero / Bio ───────────────────────────────────────────── */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px 40px;
+  margin-bottom: 32px;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
+.hero-text { flex: 1; }
+
+.hero-name {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -.5px;
+  margin-bottom: 14px;
+  color: var(--text);
 }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+.hero-name .cn {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 8px;
 }
 
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+.hero-text p { color: #333; margin-bottom: 10px; }
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
 }
 
-papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--blue-lt);
+  color: var(--blue);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background .2s, color .2s;
+}
+.hero-links a:hover {
+  background: var(--blue);
+  color: var(--white);
 }
 
-name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+.hero-photo {
+  flex-shrink: 0;
+  width: 150px;
+}
+.hero-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  display: block;
+  transition: transform .3s;
+}
+.hero-photo img:hover { transform: scale(1.04); }
+
+/* ── Section card ─────────────────────────────────────────── */
+.section {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px 36px;
+  margin-bottom: 24px;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--blue-lt);
+  letter-spacing: -.2px;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
+/* ── Publications ─────────────────────────────────────────── */
+.pub-list { display: flex; flex-direction: column; gap: 16px; }
+
+.pub-item {
+  padding: 16px 18px;
+  border-left: 3px solid var(--blue);
+  background: var(--bg);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.pub-title {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.pub-venue {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 13.5px;
+  margin-bottom: 6px;
+}
+
+.pub-badge {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+}
+
+.pub-authors {
+  font-size: 13.5px;
+  color: #555;
+}
+.pub-authors strong { color: var(--text); }
+
+/* ── Research Experience ──────────────────────────────────── */
+.exp-list { display: flex; flex-direction: column; gap: 20px; }
+
+.exp-item { padding-left: 18px; border-left: 2px solid var(--border); position: relative; }
+.exp-item::before {
+  content: '';
   position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+  left: -5px; top: 6px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
 }
 
-span.highlight {
-  background-color: #ffffd0;
+.exp-title {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--text);
+}
+
+.exp-date {
+  font-size: 12.5px;
+  color: var(--muted);
+  white-space: nowrap;
+  background: var(--bg);
+  padding: 2px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.exp-bullets {
+  list-style: disc;
+  padding-left: 18px;
+  color: #444;
+  font-size: 13.5px;
+}
+.exp-bullets li { margin-bottom: 2px; }
+
+/* ── Skills ───────────────────────────────────────────────── */
+.skills-grid { display: flex; flex-direction: column; gap: 12px; }
+
+.skill-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+
+.skill-label {
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--text);
+  min-width: 160px;
+}
+
+.skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+
+.skill-tag {
+  background: var(--blue-lt);
+  color: var(--blue);
+  font-size: 12.5px;
+  padding: 3px 11px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* ── Awards ───────────────────────────────────────────────── */
+.award-list { display: flex; flex-direction: column; gap: 10px; }
+
+.award-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.award-item:hover { background: var(--bg); }
+
+.award-name { font-weight: 600; font-size: 14px; }
+.award-name .award-org { font-weight: 400; color: var(--muted); }
+
+.award-year {
+  font-size: 12.5px;
+  color: var(--muted);
+  background: var(--bg);
+  padding: 2px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+/* ── Teaching & Leadership ────────────────────────────────── */
+.teach-list { display: flex; flex-direction: column; gap: 18px; }
+
+.teach-item { padding-left: 18px; border-left: 2px solid var(--border); position: relative; }
+.teach-item::before {
+  content: '';
+  position: absolute;
+  left: -5px; top: 6px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.teach-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.teach-title {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--text);
+}
+
+.teach-bullets {
+  list-style: disc;
+  padding-left: 18px;
+  color: #444;
+  font-size: 13.5px;
+}
+.teach-bullets li { margin-bottom: 2px; }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 12.5px;
+  color: #aaa;
+}
+.footer a { color: #bbb; }
+.footer a:hover { color: var(--orange); }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 620px) {
+  .hero { flex-direction: column-reverse; align-items: center; padding: 24px 20px; text-align: center; }
+  .hero-links { justify-content: center; }
+  .hero-photo img { width: 120px; height: 120px; }
+  .section { padding: 22px 18px; }
+  .skill-label { min-width: unset; width: 100%; }
 }
