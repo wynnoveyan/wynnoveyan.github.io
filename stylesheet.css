@@ -250,7 +250,7 @@ a:hover { color: var(--orange); }
   min-width: 160px;
 }
 
-.skill-tags { display: flex; flex-wrap: nowrap; gap: 6px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
 .skill-tag {
   background: var(--blue-lt);
