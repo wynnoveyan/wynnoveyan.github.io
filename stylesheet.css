@@ -36,7 +36,7 @@ a:hover { color: var(--orange); }
 
 /* ── Layout wrapper ───────────────────────────────────────── */
 .page-wrap {
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 40px 24px 60px;
 }
@@ -129,6 +129,25 @@ a:hover { color: var(--orange); }
   border-bottom: 2px solid var(--blue-lt);
   letter-spacing: -.2px;
 }
+
+/* ── Education ────────────────────────────────────────────── */
+.edu-list { display: flex; flex-direction: column; gap: 16px; }
+
+.edu-item { padding: 14px 16px; border-radius: var(--radius); background: var(--bg); }
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.edu-school { font-weight: 700; font-size: 14.5px; color: var(--text); }
+.edu-loc { font-size: 13.5px; color: var(--muted); }
+.edu-degree { font-size: 13.5px; color: #444; }
+.edu-gpa { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 
 /* ── Publications ─────────────────────────────────────────── */
 .pub-list { display: flex; flex-direction: column; gap: 16px; }
@@ -231,7 +250,7 @@ a:hover { color: var(--orange); }
   min-width: 160px;
 }
 
-.skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.skill-tags { display: flex; flex-wrap: nowrap; gap: 6px; }
 
 .skill-tag {
   background: var(--blue-lt);
