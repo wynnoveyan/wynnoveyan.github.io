@@ -34,6 +34,34 @@ a {
 }
 a:hover { color: var(--orange); }
 
+/* ── Top Nav ──────────────────────────────────────────────── */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 24px;
+  flex-wrap: wrap;
+}
+
+.top-nav a {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 16px;
+  transition: background .2s, color .2s;
+}
+
+.top-nav a:hover {
+  background: var(--blue-lt);
+  color: var(--blue);
+}
+
 /* ── Layout wrapper ───────────────────────────────────────── */
 .page-wrap {
   max-width: 960px;
