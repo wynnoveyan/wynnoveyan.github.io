@@ -2,7 +2,7 @@
 
 Personal academic homepage for Weijia Yan (闫唯佳), Ph.D. student in Mechanical Engineering at Texas A&M University.
 
-**Live site:** https://antoinexu.github.io/wynnoveyan.github.io/
+**Live site:** https://wynnoveyan.github.io/
 
 ## Contents
 
