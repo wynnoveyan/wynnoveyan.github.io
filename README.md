@@ -7,6 +7,7 @@ Personal academic homepage for Weijia Yan (闫唯佳), Ph.D. student in Mechanic
 ## Contents
 
 - Bio & contact links
+- Education
 - Publications
 - Research Experience
 - Skills
