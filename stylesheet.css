@@ -9,12 +9,36 @@
   --blue-lt: #eaf2fb;
   --orange:  #e07b28;
   --text:    #1a1a2e;
+  --text-2:  #333;
+  --text-3:  #444;
+  --text-4:  #555;
   --muted:   #666;
   --border:  #e4e8ed;
   --bg:      #f8f9fb;
   --white:   #ffffff;
+  --footer:  #aaa;
+  --footer-link: #bbb;
   --radius:  10px;
   --shadow:  0 2px 12px rgba(0,0,0,0.07);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --blue:    #5b9fe0;
+    --blue-lt: #1c2b3d;
+    --orange:  #e89355;
+    --text:    #eceef2;
+    --text-2:  #d4d6dc;
+    --text-3:  #c2c4cc;
+    --text-4:  #b0b2bb;
+    --muted:   #8a8d97;
+    --border:  #2c2f38;
+    --bg:      #14161c;
+    --white:   #1b1e26;
+    --footer:  #6a6d76;
+    --footer-link: #7c7f88;
+    --shadow:  0 2px 12px rgba(0,0,0,0.35);
+  }
 }
 
 html { scroll-behavior: smooth; }
@@ -70,7 +94,7 @@ a:hover { color: var(--orange); }
   margin-left: 8px;
 }
 
-.hero-text p { color: #333; margin-bottom: 10px; }
+.hero-text p { color: var(--text-2); margin-bottom: 10px; }
 
 .hero-links {
   display: flex;
@@ -146,7 +170,7 @@ a:hover { color: var(--orange); }
 
 .edu-school { font-weight: 700; font-size: 14.5px; color: var(--text); }
 .edu-loc { font-size: 13.5px; color: var(--muted); }
-.edu-degree { font-size: 13.5px; color: #444; }
+.edu-degree { font-size: 13.5px; color: var(--text-3); }
 .edu-gpa { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 
 /* ── Publications ─────────────────────────────────────────── */
@@ -188,7 +212,7 @@ a:hover { color: var(--orange); }
 
 .pub-authors {
   font-size: 13.5px;
-  color: #555;
+  color: var(--text-4);
 }
 .pub-authors strong { color: var(--text); }
 
@@ -233,7 +257,7 @@ a:hover { color: var(--orange); }
 .exp-bullets {
   list-style: disc;
   padding-left: 18px;
-  color: #444;
+  color: var(--text-3);
   font-size: 13.5px;
 }
 .exp-bullets li { margin-bottom: 2px; }
@@ -320,7 +344,7 @@ a:hover { color: var(--orange); }
 .teach-bullets {
   list-style: disc;
   padding-left: 18px;
-  color: #444;
+  color: var(--text-3);
   font-size: 13.5px;
 }
 .teach-bullets li { margin-bottom: 2px; }
@@ -330,9 +354,9 @@ a:hover { color: var(--orange); }
   text-align: center;
   margin-top: 16px;
   font-size: 12.5px;
-  color: #aaa;
+  color: var(--footer);
 }
-.footer a { color: #bbb; }
+.footer a { color: var(--footer-link); }
 .footer a:hover { color: var(--orange); }
 
 /* ── Responsive ───────────────────────────────────────────── */
